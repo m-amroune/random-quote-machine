@@ -1,0 +1,42 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: burlywood ;
+}
+
+#quote-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: burlywood;
+    height: 400px;
+}
+
+.actions-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.social-links{
+    display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#tweet-quote, .social-icon {
+    background-color: burlywood;
+    color: #fff;
+}
+
+#new-quote{
+    background-color: burlywood;
+    color: #fff;
+}
