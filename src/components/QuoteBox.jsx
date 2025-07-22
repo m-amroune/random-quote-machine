@@ -1,6 +1,8 @@
 import React from "react";
 import { FaTwitter, FaTumblr } from "react-icons/fa";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 const quotes = [
   {
@@ -85,9 +87,11 @@ const quotes = [
   },
 ];
 
+// Main functional component for the quote machine
 const QuoteBox = () => {
+   // State to hold the currently displayed quote
   const [quote, setQuote] = useState(quotes[0]);
-
+  // Function to select a random quote from the list
   const quoteRandom = () => {
     let randomIndex = Math.floor(Math.random() * quotes.length);
     let selectedQuote = quotes[randomIndex];
@@ -97,12 +101,13 @@ const QuoteBox = () => {
   return (
     <div>
       <div id="quote-box">
-        <span id="text"> {quote.text} </span>
+        <span id="text"> <FontAwesomeIcon icon={faQuoteLeft}/> {quote.text} </span>
         <span id="author">{quote.author}</span>
         <div className="actions-container">
+          {/* Buttons section : social links */}
           <div className="social-links">
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/intent/tweet"
               target="_blank"
               rel="noreferrer"
               id="tweet-quote"
@@ -118,6 +123,8 @@ const QuoteBox = () => {
               <FaTumblr />
             </a>
           </div>
+
+          {/* Button with Event for new random quote */}
           <button id="new-quote"  onClick={quoteRandom}  >New quote</button>
         </div>
       </div>

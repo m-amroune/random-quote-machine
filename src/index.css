@@ -1,9 +1,16 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background-color: burlywood ;
+  padding: 2rem;
+ 
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+   background-color: burlywood ;
 }
 
 #quote-box{
@@ -15,8 +22,18 @@
     margin: 0 auto;
     background-color: #fff;
     color: burlywood;
-    height: 400px;
+    height: 300px;
 }
+
+#text {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: burlywood ;
+  margin-top: 3rem;
+  padding: 0 2rem;
+}
+
 
 .actions-container{
     display: flex;
@@ -34,9 +51,23 @@
 #tweet-quote, .social-icon {
     background-color: burlywood;
     color: #fff;
+    padding: 0.5rem 0.7rem;
+}
+
+#tweet-quote:hover,
+.social-icon:hover {
+   background-color: #d2a46f; 
 }
 
 #new-quote{
     background-color: burlywood;
     color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 5%;
+}
+
+#new-quote:hover {
+  background-color: #d2a46f; 
 }
